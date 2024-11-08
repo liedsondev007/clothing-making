@@ -1,0 +1,294 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  background-color: #f3f4f6;
+  line-height: 1.6;
+}
+
+/* Navegação */
+header {
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #f0a500;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f0a500;
+}
+
+/* Landing Page */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  color: #fff;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.landing-page .logo-container {
+  margin-bottom: 1rem;
+}
+
+.landing-page .logo-image {
+  max-width: 150px;
+  border-radius: 50%;
+}
+
+.landing-page h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.landing-page p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin-top: 0.5rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.cta-button {
+  margin-top: 2rem;
+  padding: 0.8rem 2.5rem;
+  background-color: #f0a500;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 30px;
+  transition: background 0.3s;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #e08e00;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Seções */
+section {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Sobre Nós */
+#about p,
+#about h3 {
+  color: #555;
+}
+
+/* Serviços */
+.service {
+  margin-top: 1.5rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+}
+
+.service h3 {
+  font-size: 1.5rem;
+  color: #f0a500;
+}
+
+.service p {
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+/* Trabalhe Conosco */
+#careers {
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+}
+
+#careers p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+#careers .cta-button {
+  margin-top: 2rem; /* Aumente a margem superior para alinhar melhor com o texto */
+  padding: 0.8rem 2.5rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  background-color: #f0a500;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+#careers .cta-button:hover {
+  background-color: #e08e00;
+}
+
+/* Contato */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea,
+button {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #f0a500;
+}
+
+button {
+  background-color: #f0a500;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e08e00;
+}
+
+/* Rodapé */
+footer {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #1a1a1a;
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
+
+  .landing-page h1 {
+    font-size: 2.5rem;
+  }
+
+  .landing-page p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 0.6rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-page h1 {
+    font-size: 2rem;
+  }
+
+  .landing-page p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .service h3 {
+    font-size: 1.3rem;
+  }
+
+  form {
+    padding: 1rem;
+  }
+}
